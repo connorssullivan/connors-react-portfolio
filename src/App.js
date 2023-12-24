@@ -4,7 +4,8 @@ import Nav from "./nav/Nav.js";
 import About from "./about/about.js";
 import Skills from "./skills/skills.js";
 import Projects from "./projects/projects.js";
-import Contact from "./cotact/contact.js";
+import Contact from "./contact/contact.js";
+import "./styles/app.css";
 
 const App = () => {
   return (
