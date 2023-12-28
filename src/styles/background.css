@@ -1,0 +1,28 @@
+/* Styles for the element with ID 'bg' */
+#bg {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+  }
+  
+  /* Styles for the shadow overlay div */
+  .shadow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Media query for screens with a maximum width of 700px */
+  @media (max-width: 700px) {
+    .shadow-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }

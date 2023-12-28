@@ -12,8 +12,10 @@ import envelope from "../assets/envelope.png";
 import "../styles/nav.css";
 
 export default function Nav() {
+  // look up current location
   const location = useLocation();
 
+  // Determine the navigation class based on the current pathname
   const getNavPositionClass = () => {
     switch (location.pathname) {
       case "/":
@@ -45,14 +47,16 @@ export default function Nav() {
       }
     };
 
-
-    const navPositionClass = getNavPositionClass();
+  // Get the current navigation position class and page title
+  const navPositionClass = getNavPositionClass();
   const pageTitle = getPageTitle();
 
+  // Check if a given navigation class is the current page
   const isCurrentPage = (navClass) => {
     return navClass === navPositionClass;
   };
 
+    //Render a navigation link with a icon
     const renderNavLink = (to, imgSrc, altText, navClass) => {
       const isCurrent = isCurrentPage(navClass);
       const linkClass = isCurrent ? "nav-link current" : "nav-link";
@@ -65,6 +69,7 @@ export default function Nav() {
       );
     };
 
+    // Render the main navigation
     return (
       <nav className={`nav ${navPositionClass}`}>
         {renderNavLink(
@@ -75,7 +80,7 @@ export default function Nav() {
         )}
         {renderNavLink("/skills", deadEye, "deadEye icon", "nav-skills")}
         {renderNavLink("/projects", stack, "stack icon", "nav-projects")}
-        {renderNavLink("contact", envelope, "envelope icon", "nav-contact")}
+        {renderNavLink("/contact", envelope, "envelope icon", "nav-contact")}
       </nav>
     );
   }

@@ -1,6 +1,32 @@
-@import url("https://fonts.googleapis.com/css2family=Russo+One&display=swap");
+/*App CSS
+This is changes the text on the homepage*/
 
-body{
+@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
+
+body {
     font-family: "Russo One", sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+/*Set the colors*/
+:root {
+    --purple: #540351;
+    --blue: #3627b2;
+    --cyan: #25afce;
+    --transparent: #00000000;
+    --radius-left: 3rem 0 0 3rem;
+    --radius-right: 0 3rem 3ewm 0;
+}
+
+/*Set the hover background*/
+button:hover,
+.class-sub-container a:hover,
+.project-item:hover,
+.skill-item:hover,
+.item:not(.active):hover,
+.sub-container-2:not(.active-subheading):hover,
+.sub-container-3:not(.active-subheading):hover {
+  background-image: linear-gradient(90deg, #ffffff00, #ffffff42 50%, #ffffff00);
 }

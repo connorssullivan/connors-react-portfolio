@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+import Avatar from "../Avatar/Avatar.js";
+import AboutMenu from "./AboutMenu.js";
+
 
 export default class about extends Component {
   render() {
     return (
-      <div>About</div>
+      <>
+        <Avatar page ="about"/>
+        <AboutMenu/>
+      </>
     )
   }
 }

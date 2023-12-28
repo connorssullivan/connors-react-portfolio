@@ -1,3 +1,79 @@
-body{
-    background-color: blue;
+/*Adjust navigation menu*/
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    top: 3rem;
+    gap: 1.5625rem;
+    left: 50%
 }
+
+/*Translate all the tabs a little to the left*/
+.nav-about {
+    transform: translateX(-1.56rem);
+  }
+  .nav-skills {
+    transform: translateX(-6.25rem);
+  }
+  .nav-projects {
+    transform: translateX(-10.94rem);
+  }
+  .nav-contact {
+    transform: translateX(-15.62rem);
+  }
+
+  /*Line up title*/
+  a {
+    width: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+/*Adjust the title*/
+  .page-title {
+    font-size: 0.875rem;
+    color: white;
+    cursor: default;
+  }
+
+  /*Adjust the curser*/
+  .nav-link {
+    opacity: 0.7;
+  }
+  .nav-link:hover {
+    opacity: 1;
+  }
+  .nav-link.current {
+    opacity: 1;
+  }
+
+  @media (max-width: 1100px) {
+    /*Adjust the translation of all nav icons*/
+    .nav-about,
+    .nav-skills,
+    .nav-projects,
+    .nav-contact {
+      transform: translateX(0);  
+    }
+    /* Position the entire navigation menu at the bottom and center it */
+    .nav {
+      top: calc(100vh - 8rem);
+      transform: translateX(-50%);
+    }
+    
+    /* Set the width of navigation links */
+    .nav-link {
+      width: 2rem;
+    }
+    .nav-link img {
+      width: 2rem;
+    }
+
+    /* Hide page titles  */
+    .page-title {
+      display: none;
+    }
+  }
